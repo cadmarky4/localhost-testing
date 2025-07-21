@@ -1,0 +1,6 @@
+﻿CREATE DATABASE IF NOT EXISTS regmondb;
+USE regmondb;
+CREATE USER IF NOT EXISTS 'dbuser'@'%' IDENTIFIED BY 'regmon123';
+GRANT ALL PRIVILEGES ON regmondb.* TO 'dbuser'@'%';
+GRANT ALL PRIVILEGES ON regmondb.* TO 'root'@'%';
+FLUSH PRIVILEGES;
